@@ -1,4 +1,5 @@
 const { Client } = require('discord.js');
+const botconfig = require("./botconfig.json");
 const fs = require('fs');
 const Enmap = require('enmap');
 require('dotenv-flow').config();
@@ -7,7 +8,7 @@ const http = require('http');
 const port = process.env.PORT || 3000;
 http.createServer().listen(port);
 
-const prefix = process.env.prefix
+const prefix = botconfig.prefix
 const token = process.env.TOKEN
 
 const client = new Client();
