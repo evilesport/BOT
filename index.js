@@ -7,7 +7,7 @@ const http = require('http');
 const port = process.env.PORT || 3000;
 http.createServer().listen(port);
 
-const prefix = botconfig.prefix
+const prefix = process.env.prefix
 const token = process.env.TOKEN
 
 const client = new Client();
@@ -30,6 +30,115 @@ fs.readdir('./commands/', async (err, files) => {
     files.forEach(file => {
       if (!file.endsWith('.js')) return;
       let props = require(`./commands/${file}`);
+      let cmdName = file.split('.')[0];
+      console.log(`Loaded command '${cmdName}'`);
+      client.commands.set(cmdName, props);
+    });
+  });
+
+  fs.readdir('./commands/apply/', async (err, files) => {
+    if (err) return console.error;
+    files.forEach(file => {
+      if (!file.endsWith('.js')) return;
+      let props = require(`./commands/apply/${file}`);
+      let cmdName = file.split('.')[0];
+      console.log(`Loaded command '${cmdName}'`);
+      client.commands.set(cmdName, props);
+    });
+  });
+
+  fs.readdir('./commands/global/', async (err, files) => {
+    if (err) return console.error;
+    files.forEach(file => {
+      if (!file.endsWith('.js')) return;
+      let props = require(`./commands/global/${file}`);
+      let cmdName = file.split('.')[0];
+      console.log(`Loaded command '${cmdName}'`);
+      client.commands.set(cmdName, props);
+    });
+  });
+
+  fs.readdir('./commands/help/', async (err, files) => {
+    if (err) return console.error;
+    files.forEach(file => {
+      if (!file.endsWith('.js')) return;
+      let props = require(`./commands/help/${file}`);
+      let cmdName = file.split('.')[0];
+      console.log(`Loaded command '${cmdName}'`);
+      client.commands.set(cmdName, props);
+    });
+  });
+
+  fs.readdir('./commands/Moderation-commands/', async (err, files) => {
+    if (err) return console.error;
+    files.forEach(file => {
+      if (!file.endsWith('.js')) return;
+      let props = require(`./commands/Moderation-commands/${file}`);
+      let cmdName = file.split('.')[0];
+      console.log(`Loaded command '${cmdName}'`);
+      client.commands.set(cmdName, props);
+    });
+  });
+
+  fs.readdir('./commands/start-commands/', async (err, files) => {
+    if (err) return console.error;
+    files.forEach(file => {
+      if (!file.endsWith('.js')) return;
+      let props = require(`./commands/start-commands/${file}`);
+      let cmdName = file.split('.')[0];
+      console.log(`Loaded command '${cmdName}'`);
+      client.commands.set(cmdName, props);
+    });
+  });
+
+  fs.readdir('./commands/start-commands/', async (err, files) => {
+    if (err) return console.error;
+    files.forEach(file => {
+      if (!file.endsWith('.js')) return;
+      let props = require(`./commands/start-commands/${file}`);
+      let cmdName = file.split('.')[0];
+      console.log(`Loaded command '${cmdName}'`);
+      client.commands.set(cmdName, props);
+    });
+  });
+
+  fs.readdir('./commands/other-commands/', async (err, files) => {
+    if (err) return console.error;
+    files.forEach(file => {
+      if (!file.endsWith('.js')) return;
+      let props = require(`./commands/other-commands/${file}`);
+      let cmdName = file.split('.')[0];
+      console.log(`Loaded command '${cmdName}'`);
+      client.commands.set(cmdName, props);
+    });
+  });
+
+  fs.readdir('./commands/music/', async (err, files) => {
+    if (err) return console.error;
+    files.forEach(file => {
+      if (!file.endsWith('.js')) return;
+      let props = require(`./commands/music/${file}`);
+      let cmdName = file.split('.')[0];
+      console.log(`Loaded command '${cmdName}'`);
+      client.commands.set(cmdName, props);
+    });
+  });
+  fs.readdir('./commands/test-folder/', async (err, files) => {
+    if (err) return console.error;
+    files.forEach(file => {
+      if (!file.endsWith('.js')) return;
+      let props = require(`./commands/test-folder/${file}`);
+      let cmdName = file.split('.')[0];
+      console.log(`Loaded command '${cmdName}'`);
+      client.commands.set(cmdName, props);
+    });
+  });
+
+  fs.readdir('./commands/scrim/', async (err, files) => {
+    if (err) return console.error;
+    files.forEach(file => {
+      if (!file.endsWith('.js')) return;
+      let props = require(`./commands/scrim/${file}`);
       let cmdName = file.split('.')[0];
       console.log(`Loaded command '${cmdName}'`);
       client.commands.set(cmdName, props);

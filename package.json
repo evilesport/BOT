@@ -20,6 +20,7 @@
     "fortnite": "^4.1.1",
     "fortnitetracker-7days-stats": "^3.1.2",
     "fs": "0.0.1-security",
+    "klasa": "^0.4.0",
     "minimist": "^1.2.0",
     "moment": "^2.24.0",
     "moment-duration-format": "^2.2.2",
@@ -36,6 +37,7 @@
     "table": "^5.2.3",
     "tempy": "^0.2.1",
     "then": "0.0.1",
+    "tz-lookup": "^6.1.8",
     "weather-js": "^2.0.0",
     "ytdl-core": "^0.29.1"
   }
