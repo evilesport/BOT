@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Mattes",
   "license": "ISC",
   "dependencies": {
     "array-sort": "^1.0.0",
@@ -40,5 +40,14 @@
     "tz-lookup": "^6.1.8",
     "weather-js": "^2.0.0",
     "ytdl-core": "^0.29.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evilesport/BOT.git"
+  },
+  "bugs": {
+    "url": "https://github.com/evilesport/BOT/issues"
+  },
+  "homepage": "https://github.com/evilesport/BOT#readme"
 }
